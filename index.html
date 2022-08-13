@@ -1,0 +1,151 @@
+<!DOCTYPE html>  <!-- Berättar för Webbläsare om vilken filtyp att vänta sig? Ens nödvändigt? -->
+<html>          <!-- Här börjar HTML-koden -->
+    <head>      <!-- Detta syns INTE inuti webbfönstret? Enligt kursbok berättar det om HTML-filen än något faktiskt innehåll -->
+        <title>WebbkodsLärlingens Kodprojekt</title> <!-- Syns ovanför adressfältet i webbläsaren -->
+        <!-- Teckenuppsättning | SEO Description | SEO Keywords | SEO för författare -->
+        <meta charset="UTF-8"><meta name="description" content="Webbutveckling för nybörjare"> 
+        <meta name="keywords" content="Webbutveckling för nybörjare, Webbutveckling, HTML, CSS, JavaScript"> 
+        <meta name="author" content="WebbutvecklingsLärlingen"> 
+        <!-- initial-scale påverkar zoom-funktionen i webbläsare? -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <style> /* Så här måste jag kommentera efter <Style> Här inne ligger CSS-kod */ 
+        .container1 {  /* Jag försöker centrera en div medan innehållet går från vänster->höger  */ 
+            overflow: scroll;
+            background-color: bisque; /* Så jag ser hur stor div är */
+            margin: 0 auto;
+            max-width: 720px;
+            padding: 25px;
+        }
+        </style> <!-- Jag får ej kommentera med HTML-kommentarstecken direkt efter <style>? -->
+            <script>
+                let GetHTMLID = document.getElementById('FirstPAnchor');
+                GetHTMLID.createElement('p');
+                GetHTMLID.innerText('Jag har skapat en paragraf med en sträng');
+            </script> 
+    </head>
+    <!-- Här börjar HTML-kod som syns inuti webbfönstret? -->
+    <body>      
+        <div class="container1"> <!-- Första div ska tolkas som "container" om man vill centrera allt innehåll? -->
+            <!-- Länk till HTML-fil för övningar i kursbok-->
+            <a href="JonDuckett-HTMLCSSDesign.html"">Övningarna för JonDuckett HTML CSS & Design-boken</a> 
+
+            <p id="FirstPAnchor">Detta är en paragraf som innehåller både <b>Bold</b> och <i>Italic</i> för  <!-- s 44-45 -->
+                att betona respektive understryka att något skall uttalas annorlunda.</p>
+
+            <p>Jag använder särskild HTML-kod (superskript) för att höja upp tecken: 
+                E = MC<sup>2</sup>. Liknande går med subskript: CO<sub>2</sub>.</p> <!-- s 46-->
+
+            <p>Försök till   White space    (tomutrymme?)   ger    inget förutom ett mellanslag innan punkten   .</p> <!-- s 47-->
+
+            <p>När jag vill göra radbrytning så är det <br/> som gäller. Sedan kan vi skapa en snygg horisontell linje: <hr/></p> <!-- s 48-->
+
+            <p>En ny paragraf här visar ett sätt att dela in textinnehållet på.</p>
+            <!-- Här är högst upp i webbläsare 1440px lång Fast id="FirstAnchor är flera paragrafer ovan"-->
+            <p>Använd <strong>strong</strong>-taggen för att betona något. Eller empatisera med hjälp av <em>em</em>-taggen.</p> <!-- s 51-->
+
+            <blockquote><p>Använd aldrig citatblock för att indentera text.</p></blockquote> <!-- s 52-->
+
+            <p><q>Alternativt kan q-taggen skapa citattecken inuti dess taggar.</q> <br/>
+                Glöm inte heller attributen cite="" som ger källhänvisningen till respektive citat.</p>
+            <p><acronym title="Förkortning">Förkort.</acronym> kan visa vad de betyder med hjälp av  <!-- s 53-->
+                acronym-taggen. HTML5 föredrar dock <abbr title="Abbreviation""">Abbr</abbr> istället.</p>
+
+                <p><cite>Konsten att citera</cite> är inte en boktitel men en HTML-tagg.</p> <!-- s 54-->
+
+                <p>Att ge en <dfn>definition</dfn> av något är viktigt för att lära sig rätt.</p>
+
+            <address><p>Adresser skrivs sedan med paragraftagg inuti sig. Notera att de blir kursiva!</p></address> <!-- s 55-->
+
+            <p><ins>Infoga något med ins-taggen</ins> eller <del>ta bort något med del-taggen</del>.</p> 
+
+            <p>Använd s-taggen för att indikera att <s>något inte gäller längre men ändå bör anges</s>.</p>
+        <hr/>
+        <p><ol> <!-- s 65-->
+            <li>Detta är exempel på en numrerad lista med hjälp av ol- och li-taggarna.</li>
+            <li>Varje li-tagg blir då automatiskt numrerad. CSS kan ändra, inuti ol-taggen, vad för slags stil li-taggen ska ha.</li>
+        </ol></p>
+        <p><ul> <!-- s 66-->
+            <li>ul-taggen ger då en icke-numrerad lista och blir en vanlig punktlista.</li>
+            <li>Använd CSS för att ändra punkterna till något annat och mer fräschare.</li>
+        </ul></p>
+        <p>
+            <dl> <!-- s 67-->
+                <dt>dl-taggen betyder definitionslista</dt>
+                    <dd>Definitionslistan får sedan en dd-tagg under varje dt-tagg som i sin tur är det som definieras i dd-taggen.</dd>
+            </dl>
+        </p>
+        <p>
+            <ul> <!-- s 68-->
+                <li>Denna icke-numrerade lista har en ytterligare lista inuti sig
+                <ul>
+                    <li>Vi skapar bara en ny ul-tagg med sina li-taggar inuti en given li-tagg i föregående ul-tagg!</li> 
+                </ul>
+            </li>
+            </ul>
+        </p>
+        <hr/>
+        <p>Länkar såsom den till <a href="JonDuckett-HTMLCSSDesign.html">Bokövningarna</a> består av en a-tagg med href <!-- s 77-->
+        som pekar vart länken skall gå. Sedan mellan a-taggen är länkens namn som man klickar eller trycker på.</p>
+        <p>Observera att länken utan någon CSS alltid är blå och understruken tills att du klickat på dem minst en gång.</p>
+
+        <p>Länkar kan vara inuti exempelvis listor: <a href="JonDuckett-HTMLCSSDesign.html">
+                    <ul><li>Bokövningarna igen men i en icke-numrerad lista</li></ul></a></p>
+                    <p>Skilj på Absolut URL och Relativ URL: 
+                        <ul>
+                            <li>
+                                Absolut URL är hela adressen såsom: http://www.hemsida.com/annanlänk/
+                            </li>
+                            <li>
+                                Relativ URL är en kortare adress utifrån var nuvarande HTML-sida ligger på servern, såsom: 
+                                JonDuckett-HTMLCSSDesign.html som ligger i samma mapp som index.html (alltså denna sida du är på nu).
+                            </li>
+                            <li>
+                                Absolut URL brukar länka till sidor utanför nuvarande hemsida, medan Relativ URL 
+                                brukar länka till sidor inuti samma nuvarande hemsida.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>Förstasidan, startsidan eller hemsidan (engelskans "homepage") brukar heta index.html. Om servern 
+                        där sidan ligger på har flera undermappar så kommer varje undermapp att få en egen index.html.</p>
+                        <p>T.ex. skulle det gå att göra en undermapp för JonDuckett så det blir JonDuckett/index.html istället
+                            för den direkta länken JonDuckett-HTMLCSSDesign.html som det är just nu eftersom det redan finns
+                            en index.html som är startsidan. Finns det en JonDuckett-mapp med index.html så räcker det då att 
+                            navigera till ProjectWebbutveckling/JonDuckett/ för att komma till dess index.html.
+                        </p>
+                        <p>Mappen för den första index.html-filen som du landar på brukar heta rotmappen, "root folder/directory".</p>
+                        <p>Kom ihåg att länka relativt om du skall länka till sidor på din hemsida på din egendator!</p>
+                        <p>Det finns 5 olika slags Relativa URL-typer:
+                        <ol>
+                            <li>
+                                Samma mapp (same folder) = Länka med "länk.html"
+                            </li>
+                            <li>
+                                Barnmapp när du ska länka en mapp under (child folder) = Länka med "undermapp/länk.html"
+                            </li>
+                            <li>
+                                Superbarnmappen när du ska länka två steg bakåt någonstans = Länka med "undermapp/undermapp/länk.html"
+                            </li>
+                            <li>
+                                Föräldramapp när du ska länka en mapp under (parent folder) = Länka med "../index.html"
+                            </li>
+                            <li>
+                                Superföräldramapp när du ska länka 2 mappar under = Länka med "../../index.html"
+                            </li>
+                        </ol>
+                    </p>
+                    <p>E-postlänkar är simpelt: mailto:epostadress@hemsida.se 
+                        inuti a-taggens href="" eller <a href="mailto:epostadress@hemsida.se">melja</a> där du ser att mailto:
+                        inte kommer med i faktiska länkens namn.                       </p>
+                        <p>Att klicka på en sådan här slags länk leder till att standardprogrammet
+                            för e-post startas i försök att påbörja ett mejl som skickas till den angivna e-postadressen i e-postlänken.</p>
+              <p>Öppna länken till JonDuckett i nytt fönster med hjälp av target="_blank" attributen som du lägger efter a href i a-taggen:
+                <a href="JonDuckett-HTMLCSSDesign.html" target="_blank">öppna JonDuckett i nytt fönster</a>.
+              </p>      
+              <p>Öppna någonstans inuti samma sida med hjälp av attributen id="FirstPAnchor" vilket tar dig högst upp på denna sida
+                som nu börjar bli en del lång. Länken är då: a href="#FirstPAnchor". Prova här: <a href="#FirstPAnchor">Toppen</a>.
+                <p>Attributen id="" kan användas för alla slags HTML-taggar och används flitigt för att kunna manipulera HTML-taggar och deras innehåll med JS-metoden 
+                    document.getElementByID.</p>
+              </p>
+        </div>
+    </body>
+</html> <!-- Slut på HTML-kod -->
